@@ -1,0 +1,70 @@
+0 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'i', 'vuex' ]
+1 info using npm@8.1.2
+2 info using node@v16.13.2
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 2ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 1ms
+10 timing config:load:file:/myapp/.npmrc Completed in 2ms
+11 timing config:load:user Completed in 2ms
+12 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+13 timing config:load:global Completed in 1ms
+14 timing config:load:validate Completed in 0ms
+15 timing config:load:credentials Completed in 2ms
+16 timing config:load:setEnvs Completed in 2ms
+17 timing config:load Completed in 14ms
+18 timing npm:load:configload Completed in 14ms
+19 timing npm:load:setTitle Completed in 0ms
+20 timing npm:load:setupLog Completed in 1ms
+21 timing config:load:flatten Completed in 6ms
+22 timing npm:load:cleanupLog Completed in 3ms
+23 timing npm:load:configScope Completed in 0ms
+24 timing npm:load:projectScope Completed in 1ms
+25 timing npm:load Completed in 30ms
+26 timing arborist:ctor Completed in 2ms
+27 timing idealTree:init Completed in 644ms
+28 timing idealTree:userRequests Completed in 10ms
+29 silly idealTree buildDeps
+30 silly fetch manifest vuex@*
+31 timing arborist:ctor Completed in 0ms
+32 http fetch GET 200 https://registry.npmjs.org/vuex 802ms (cache miss)
+33 silly fetch manifest vue@^2.6.14
+34 http fetch GET 200 https://registry.npmjs.org/vue 65ms (cache revalidated)
+35 silly fetch manifest vue@^3.0.2
+36 timing idealTree Completed in 1546ms
+37 timing command:install Completed in 1585ms
+38 verbose stack Error: unable to resolve dependency tree
+38 verbose stack     at Arborist.[failPeerConflict] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1356:25)
+38 verbose stack     at Arborist.[loadPeerSet] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1322:34)
+38 verbose stack     at async Arborist.[buildDepStep] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:930:11)
+38 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:216:7)
+38 verbose stack     at async Promise.all (index 1)
+38 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:149:5)
+38 verbose stack     at async Install.install (/usr/local/lib/node_modules/npm/lib/install.js:170:5)
+39 verbose cwd /myapp
+40 verbose Linux 5.10.76-linuxkit
+41 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "vuex"
+42 verbose node v16.13.2
+43 verbose npm  v8.1.2
+44 error code ERESOLVE
+45 error ERESOLVE unable to resolve dependency tree
+46 error
+47 error While resolving: [1mmyapp[22m@[1m0.1.0[22m
+47 error Found: [1mvue[22m@[1m2.6.14[22m[2m[22m
+47 error [2mnode_modules/vue[22m
+47 error   [1mvue[22m@"[1m^2.6.14[22m" from the root project
+47 error
+47 error Could not resolve dependency:
+47 error [35mpeer[39m [1mvue[22m@"[1m^3.0.2[22m" from [1mvuex[22m@[1m4.0.2[22m[2m[22m
+47 error [2mnode_modules/vuex[22m
+47 error   [1mvuex[22m@"[1m*[22m" from the root project
+47 error
+47 error Fix the upstream dependency conflict, or retry
+47 error this command with --force, or --legacy-peer-deps
+47 error to accept an incorrect (and potentially broken) dependency resolution.
+47 error
+47 error See /myapp/.npm/eresolve-report.txt for a full report.
+48 verbose exit 1
